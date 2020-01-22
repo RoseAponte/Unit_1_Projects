@@ -11,12 +11,12 @@
 
 */
 "use strict";
-
+//variables
 var minsLeft = 30;
 var secsLeft = 0;
 var timeLeft = (minsLeft * 60) + (secsLeft);
 var clockID = setInterval("countdown()", 1000);
-
+//function 
 function countdown(){
    minsLeft = Math.floor(timeLeft/60);
    secsLeft = (timeLeft) - (60 * minsLeft);

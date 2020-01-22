@@ -14,13 +14,15 @@
 
 */
 
-
+//vars
 var randomQ = randomInt(0,9);
 var quoteElem = document.getElementsByTagName("quote")[0];
 
+//quote
 getQuote(randomQ);
 quoteElem.innerHTML = getQuote(randomQ);
 
+//functions
 function randomInt(lowest, size){
    var rando = Math.floor(Math.random()*size+lowest);
    return rando;

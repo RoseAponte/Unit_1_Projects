@@ -14,16 +14,17 @@
 
 */
 "use strict";
-
+//vars
 var thisDate = new Date ();
 var dateString = thisDate.toLocaleString();
 var dateHTML = "<h2>" + dateString + "</h2>";
 var thisDay = thisDate.getDay();
 var eventHTML = getEvent(thisDay);
+//change text
 document.getElementById("unionToday").insertAdjacentHTML('beforeEnd', dateHTML + eventHTML);
 
 
-
+//functioj
 function getEvent(day) {
    var eventHTML;
    switch (day) {
