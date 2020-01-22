@@ -4,16 +4,33 @@
    Case Problem 4
 
    Countdown Clock for Ticket Ordering
-   Author: 
-   Date:  
+   Author: Rose Aponte
+   Date:  1-22-20
 
    Filename:   ph_clock.js     
 
 */
+"use strict";
 
+var minsLeft = 30;
+var secsLeft = 0;
+var timeLeft = (minsLeft * 60) + (secsLeft);
+var clockID = setInterval("countdown()", 1000);
 
-
-
+function countdown(){
+   minsLeft = Math.floor(timeLeft/60);
+   secsLeft = (timeLeft) - (60 * minsLeft);
+   var minsString = addLeadingZero(minsLeft);
+   var secsString = addLeadingZero(secsLeft);
+   document.getElementById("minutes").textContent=minsString;
+   document.getElementById("seconds").textContent=secsString;
+   checkTimer();
+   timeLeft--;
+}
+function stopClock(){
+ document.getElementById("TimeHead").insertAdjacentHTML('beforeend', "<br />(Order Expired)");
+ clearInterval(clockID);
+}
 
 
 /* ------------------------------------------------- */
